@@ -56,7 +56,7 @@ public class Controlador {
             Venta venta = listIterator.next();
             resultado.add("Producto: " + venta.getProducto() + ", Precio: " + venta.getPrecio()
                     + ", Cliente: " + venta.getCliente() + ", TipoVenta: " + venta.getTipoVenta()
-                    + ", Categoria: " + venta.getCategoria());
+                    + ", Categoria: " + venta.getCategoria() + ", Conteo: " + venta.getConteo());
         }
 
         resultado.add("Iterator con el Deque de la cartera:");
@@ -67,7 +67,7 @@ public class Controlador {
             Venta venta = iterator.next();
             resultado.add("Producto: " + venta.getProducto() + ", Precio: " + venta.getPrecio()
                     + ", Cliente: " + venta.getCliente() + ", TipoVenta: " + venta.getTipoVenta()
-                    + ", Categoria: " + venta.getCategoria());
+                    + ", Categoria: " + venta.getCategoria() + ", Conteo: " + venta.getConteo());
         }
 
         model.addAttribute("resultado", resultado);
