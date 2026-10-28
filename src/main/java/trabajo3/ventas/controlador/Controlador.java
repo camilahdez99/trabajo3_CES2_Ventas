@@ -90,9 +90,13 @@ public class Controlador {
 
         resultado.add("Objetos del Deque de la cartera que son de tipo ONLINE:");
 
-        Ventas.cartera.getVentas().stream()
+        List<Venta> ventasOnline = Ventas.cartera.getVentas().stream()
                 .filter(venta -> EnumVenta.ONLINE.equals(venta.getTipoVenta()))
-                .forEach(venta -> resultado.add(venta.toString()));
+                .toList();
+
+        for (Venta venta : ventasOnline) {
+            resultado.add(venta.toString());
+        }
 
         model.addAttribute("resultado", resultado);
 
